@@ -1,0 +1,22 @@
+.home-large-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-carousel-con {
+  width: 90%;
+  height: 40vh;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-con {
+  height: 90%;
+  width: 90%;
+  padding: 40px;
+  background-color: green;
+  border: 1px solid black;
+}
