@@ -6,17 +6,128 @@
   align-items: center;
 }
 .home-carousel-con {
+  width: 100%;
+  min-height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.search-input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 7px;
+  background-color: transparent;
+}
+
+.slider-con {
   width: 90%;
-  height: 40vh;
-  border: 1px solid black;
+  height: 90%;
+}
+.carousel-loader-container {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.slider-con {
-  height: 90%;
+
+span {
+  font-weight: bold;
+  font-size: 20px;
+}
+.popular-restaurants-con {
+  min-height: 50vh;
   width: 90%;
-  padding: 40px;
-  background-color: green;
+  font-family: DM Sans;
+  display: flex;
+  flex-direction: column;
+}
+.second-con {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  top: -30px;
+}
+.restaurants-suffix {
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+}
+.restaurants-sort-by-con {
+  display: flex;
+  align-items: center;
+}
+.sort-by-icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+}
+.sort-by-dropdown {
+  height: 25px;
+  width: 90px;
+  background-color: transparent;
+  font-family: DM Sans;
+  border: 0;
+}
+.horizontal-line {
+  color: #cbd2d9;
+  width: 100%;
+  height: 1px;
+  position: relative;
+  top: -30px;
+}
+.restaurants-con {
+  width: 100%;
+  display: flex;
   border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+.restaurants-list-success-con {
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.home-pagination-con {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+.pagination-button {
+  background-color: transparent;
+  border: 1px solid #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 10px;
+}
+.pagination-icon {
+  height: 25px;
+  width: 25px;
+}
+.home-pages {
+  color: #334155;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 576px) {
+  .second-con {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .home-carousel-con {
+    min-height: 20vh;
+  }
 }

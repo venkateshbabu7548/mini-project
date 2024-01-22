@@ -17,15 +17,11 @@ const Header = props => {
   }
 
   const onClickMenu = () => {
-    changeState(prevState => ({
-      isIconClicked: !prevState.isIconClicked,
-    }))
+    changeState(true)
   }
 
   const onClickClose = () => {
-    changeState(prevState => ({
-      isIconClicked: !prevState.isIconClicked,
-    }))
+    changeState(false)
   }
 
   return (
@@ -44,12 +40,17 @@ const Header = props => {
           </div>
           <div className="header-right-container">
             <ul className="header-menu">
-              <Link to="/" className="each-menu">
-                <li>Home</li>
-              </Link>
-              <Link to="/cart" className="each-menu">
-                <li>Cart</li>
-              </Link>
+              <li>
+                <Link to="/" className="each-menu">
+                  Home
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/cart" className="each-menu">
+                  Cart
+                </Link>
+              </li>
             </ul>
             <button
               type="button"
@@ -61,7 +62,7 @@ const Header = props => {
           </div>
           <div className="header-menu-icon-con">
             <button type="button" className="button-icon" onClick={onClickMenu}>
-              <IoMenuSharp className="hamberger-icon" />
+              <IoMenuSharp className="hamberger-icon" aria-label="close" />
             </button>
           </div>
         </div>
@@ -69,18 +70,23 @@ const Header = props => {
       {isIconClicked && (
         <div className="extra-icon-con">
           <ul className="extra-content">
-            <Link to="/" className="each-menu">
-              <li>Home</li>
-            </Link>
-            <Link to="/cart" className="each-menu">
-              <li>Cart</li>
-            </Link>
+            <li>
+              <Link to="/" className="each-menu">
+                Home
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/cart" className="each-menu">
+                Cart
+              </Link>
+            </li>
           </ul>
           <button type="button" className="logout-btn" onClick={onClickLogout}>
             Logout
           </button>
           <button type="button" className="close-btn" onClick={onClickClose}>
-            <IoMdCloseCircle className="close-icon" />
+            <IoMdCloseCircle className="close-icon" aria-label="close" />
           </button>
         </div>
       )}

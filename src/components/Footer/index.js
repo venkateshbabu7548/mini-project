@@ -19,29 +19,24 @@ const Footer = () => (
         <h1 className="website-footer-heading">Tasty Kitchens</h1>
       </div>
       <p className="footer-para">
-        The only thing we are serious about is food.
-        <br />
-        Contact us on
+        The only thing we are serious about is food. Contact us on
       </p>
       <ul className="footer-icons-con">
         <li>
           <FaPinterestSquare
-            test-id="pinterest-social-icon"
+            testid="pintrest-social-icon"
             className="footer-icon"
           />
         </li>
         <li>
-          <FaInstagram
-            test-id="instagram-social-icon"
-            className="footer-icon"
-          />
+          <FaInstagram testid="instagram-social-icon" className="footer-icon" />
         </li>
         <li>
-          <FaTwitter test-id="twitter-social-icon" className="footer-icon" />
+          <FaTwitter testid="twitter-social-icon" className="footer-icon" />
         </li>
         <li>
           <FaFacebookSquare
-            test-id="facebook-social-icon"
+            testid="facebook-social-icon"
             className="footer-icon"
           />
         </li>

@@ -1,0 +1,21 @@
+.payment-con {
+  height: 60vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.payment-res {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+  text-align: center;
+}
+.pay-img {
+  height: 70px;
+  width: 70px;
+}

@@ -61,7 +61,7 @@ class Login extends Component {
                 className="website-logo"
                 alt="website logo"
               />
-              <h1 className="website-heading">Tasty Kitchens</h1>
+              <p className="website-heading">Tasty Kitchens</p>
               <h1>Login</h1>
               <form
                 className="login-form-container"

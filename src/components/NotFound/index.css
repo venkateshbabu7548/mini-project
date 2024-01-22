@@ -1,0 +1,41 @@
+.not-found-con {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  font-family: DM Sans;
+}
+.not-found-responsive {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+.not-found-text {
+  color: #475569;
+  font-size: 20px;
+}
+.not-found-btn {
+  height: 30px;
+  width: 120px;
+  background-color: #f7931e;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 0;
+}
+.not-found-img {
+  height: 30%;
+  width: 30%;
+}
+@media screen and (max-width: 576px) {
+  .not-found-text {
+    font-size: 10px;
+  }
+}
