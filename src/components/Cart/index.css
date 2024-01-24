@@ -22,7 +22,7 @@
 .order-btn {
   background-color: #f7931e;
   color: white;
-  font-weight: 500;
+  font-weight: 600;
   padding: 10px;
   border: none;
   border-radius: 8px;
@@ -52,7 +52,7 @@
 }
 .dotted {
   border: 1px dashed gray;
-  width: 78%;
+  width: 95%;
 }
 .cart-items-con {
   list-style-type: none;
@@ -62,6 +62,22 @@
   align-items: center;
   row-gap: 5px;
 }
+table {
+  width: 100%;
+}
+
+.cart-items-sm-con {
+  display: none;
+}
+th {
+  padding: 10px;
+
+  width: 33%;
+}
+tbody {
+  width: 100%;
+}
+
 .cart-con {
   display: flex;
   flex-direction: column;
@@ -97,6 +113,21 @@
     height: 100%;
   }
   .cart-head-con {
+    display: none;
+  }
+  .total-con-res {
+    width: 100%;
+  }
+  .order-btn-res {
+    width: 100%;
+  }
+  .cart-items-sm-con {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style-type: none;
+  }
+  table {
     display: none;
   }
 }

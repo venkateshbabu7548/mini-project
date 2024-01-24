@@ -40,6 +40,8 @@ const settings = {
   dots: true,
   slidesToShow: 1,
   slidesToScroll: 1,
+  dotsClass: 'slick-dots',
+  autoplay: true,
 }
 
 class Home extends Component {
@@ -154,10 +156,7 @@ class Home extends Component {
   }
 
   renderCarouselLoadingView = () => (
-    <div
-      className="carousel-loader-container"
-      data-testid="restaurants-offers-loader"
-    >
+    <div className="carousel-loader-container">
       <Loader type="Oval" color="#f7931e" height="50" width="50" />
     </div>
   )
@@ -166,11 +165,9 @@ class Home extends Component {
     const {carouselItems} = this.state
     return (
       <Slider {...settings}>
-        <ul>
-          {carouselItems.map(eachItem => (
-            <CarouselItem key={eachItem.id} image={eachItem.imageUrl} />
-          ))}
-        </ul>
+        {carouselItems.map(eachItem => (
+          <CarouselItem key={eachItem.id} image={eachItem.imageUrl} />
+        ))}
       </Slider>
     )
   }
@@ -189,10 +186,7 @@ class Home extends Component {
   }
 
   renderRestaurantsLoadingView = () => (
-    <div
-      className="carousel-loader-container"
-      data-testid="restaurants-list-loader"
-    >
+    <div className="carousel-loader-container">
       <Loader type="Oval" color="#f7931e" height="50" width="50" />
     </div>
   )
@@ -242,11 +236,12 @@ class Home extends Component {
         </div>
         <div className="popular-restaurants-con">
           <h1>Popular Restaurants</h1>
+
+          <p className="restaurants-suffix">
+            Select Your favourite restaurant special dish and make your day
+            happy...
+          </p>
           <div className="second-con">
-            <p className="restaurants-suffix">
-              Select Your favourite restaurant special dish and make your day
-              happy...
-            </p>
             <input
               type="search"
               placeholder="Search your favourite restaurant"
@@ -280,7 +275,7 @@ class Home extends Component {
               <FaAngleLeft className="pagination-icon" aria-label="close" />
             </button>
             <p className="home-pages">
-              <span data-testid="active-page-number">{activePageNumber} </span>
+              <span>{activePageNumber} </span>
               of 3
             </p>
             <button

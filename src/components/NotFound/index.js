@@ -15,11 +15,10 @@ const NotFound = () => (
         We are sorry, the page you requested could not be found.
         <br /> Please go back to the homepage
       </p>
-      <Link to="/">
-        <button type="button" className="not-found-btn">
-          Home Page
-        </button>
-      </Link>
+
+      <button type="button" className="not-found-btn">
+        <Link to="/">Home Page</Link>
+      </button>
     </div>
   </div>
 )

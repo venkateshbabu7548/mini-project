@@ -2,7 +2,7 @@ import {FaRupeeSign} from 'react-icons/fa'
 
 import './index.css'
 
-const CartItem = props => {
+const TableCell = props => {
   const {
     details,
     onIncrementQuantity,
@@ -24,14 +24,19 @@ const CartItem = props => {
   }
 
   return (
-    <li className="cart-sm-item">
-      <img src={imageUrl} alt="cartItem" className="sm-cart-img" />
-      <div className="sm-content">
-        <p className="sm-name">{name}</p>
-        <div className="sm-btn-con">
+    <tr>
+      <td>
+        <div className="cart-img-con">
+          <img src={imageUrl} alt="cartItem" className="cart-img" />
+
+          <h1 className="cart-item-name">{name}</h1>
+        </div>
+      </td>
+      <td>
+        <div className="quantity-btn-con">
           <button
             type="button"
-            className="sm-count-btn"
+            className="count-btn"
             onClick={onDecreaseQuantity}
           >
             -
@@ -39,19 +44,19 @@ const CartItem = props => {
           <p className="count">{quantity}</p>
           <button
             type="button"
-            className="sm-count-btn"
+            className="count-btn"
             onClick={onIncreaseQuantity}
           >
             +
           </button>
         </div>
-        <div className="price-con">
-          <FaRupeeSign />
-          <p>{`${cost * quantity}.00`}</p>
-        </div>
-      </div>
-    </li>
+      </td>
+      <td className="price-con">
+        <FaRupeeSign />
+        <p>{`${cost * quantity}.00`}</p>
+      </td>
+    </tr>
   )
 }
 
-export default CartItem
+export default TableCell

@@ -33,7 +33,7 @@ const Header = props => {
               <img
                 src="https://res.cloudinary.com/dqeh6jl97/image/upload/v1702367546/Frame_274_lhty1f.png"
                 className="website-logo"
-                alt="header-website-logo"
+                alt="website logo"
               />
             </Link>
             <h1 className="header-heading">Tasty Kitchens</h1>

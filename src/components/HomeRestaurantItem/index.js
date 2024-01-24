@@ -8,8 +8,8 @@ const HomeRestaurantItem = props => {
   const {id, imageUrl, menuType, name, userRating} = details
   const {rating, ratingColor, totalReviews} = userRating
   return (
-    <li className="home-restaurant-item" data-testid="restaurant-item">
-      <Link to={`/restaurant/${id}`} className="set-link">
+    <Link to={`/restaurant/${id}`} className="set-link">
+      <li className="home-restaurant-item">
         <img src={imageUrl} alt="restaurant" className="restaurant-image" />
         <div className="item-content">
           <p className="item-name">{name}</p>
@@ -20,8 +20,8 @@ const HomeRestaurantItem = props => {
             <p className="item-reviews">{`(${totalReviews} ratings)`}</p>
           </div>
         </div>
-      </Link>
-    </li>
+      </li>
+    </Link>
   )
 }
 

@@ -4,6 +4,7 @@ import {FaRupeeSign} from 'react-icons/fa'
 
 import Header from '../Header'
 import Footer from '../Footer'
+import TableCell from '../TableCell'
 import CartItem from '../CartItem'
 
 import './index.css'
@@ -63,7 +64,7 @@ class Cart extends Component {
   }
 
   renderCartLoadingView = () => (
-    <div className="cart-loader-container" data-testid="cart-loader">
+    <div className="cart-loader-container">
       <Loader type="Oval" color="#f7931e" height="50" width="50" />
     </div>
   )
@@ -89,12 +90,25 @@ class Cart extends Component {
 
     return (
       <div className="cart-con">
-        <div className="cart-head-con">
-          <p className="cart-head">Item</p>
-          <p className="cart-head">Quantity</p>
-          <p className="cart-head">Price</p>
-        </div>
-        <ul className="cart-items-con">
+        <table>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+          <tbody>
+            {cart.map(each => (
+              <TableCell
+                key={each.id}
+                details={each}
+                onIncrementQuantity={this.onIncrementQuantity}
+                onDecrementQuantity={this.onDecrementQuantity}
+                onDeleteFromCart={this.onDeleteFromCart}
+              />
+            ))}
+          </tbody>
+        </table>
+        <ul className="cart-items-sm-con">
           {cart.map(each => (
             <CartItem
               key={each.id}
@@ -105,13 +119,14 @@ class Cart extends Component {
             />
           ))}
         </ul>
+
         <hr className="dotted" />
         <div className="total-con">
           <div className="total-con-res">
             <p>Order Total:</p>
             <div className="total-price">
               <FaRupeeSign />
-              <p data-testid="total-price">{`${this.totalPrice()}.00`}</p>
+              <p>{`${this.totalPrice()}.00`}</p>
             </div>
           </div>
         </div>

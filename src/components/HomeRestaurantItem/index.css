@@ -1,44 +1,37 @@
 .home-restaurant-item {
   display: flex;
   height: 150px;
+  width: 100%;
 }
 .restaurant-image {
-  height: 100%;
-  width: 50%;
+  height: 150px;
+  width: 200px;
   border-radius: 5px;
 }
 .item-content {
-  width: 60%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 5px;
 }
 .item-name {
   color: #334155;
   font-weight: 700;
   font-size: 18px;
-  margin-left: 2px;
 }
 .item-menu-type {
   color: #64748b;
 
   font-weight: 400;
-  position: relative;
-  top: -20px;
 }
 .set-link {
-  height: 100%;
-  width: 100%;
-  display: flex;
   text-decoration: none;
 }
 .rating-con {
   display: flex;
   align-items: center;
-  position: relative;
-  top: -30px;
 }
 .item-reviews {
   color: #64748b;
@@ -46,17 +39,17 @@
 }
 
 @media screen and (max-width: 576px) {
-  .home-restaurant-item {
-    width: 100%;
-    height: 120px;
-  }
   .item-name {
-    font-size: 12px;
+    font-size: 13px;
   }
   .item-menu-type {
-    font-size: 12px;
+    font-size: 13px;
   }
   .item-reviews {
-    font-size: 12px;
+    font-size: 13px;
+  }
+  .restaurant-image {
+    width: 180px;
+    height: 140px;
   }
 }

@@ -92,7 +92,7 @@ class FoodItem extends Component {
     const {activeCount, isShowCount} = this.state
 
     return (
-      <li className="food-item-con" data-testid="foodItem">
+      <li className="food-item-con">
         <img src={imageUrl} className="food-item-img" alt={name} />
         <div className="food-item-content">
           <h1 className="food-item-name">{name}</h1>
@@ -120,18 +120,14 @@ class FoodItem extends Component {
                 type="button"
                 className="count-btn"
                 onClick={this.onDecrementCount}
-                data-testid="decrement-count"
               >
                 -
               </button>
-              <p className="count" data-testid="active-count">
-                {activeCount}
-              </p>
+              <p className="count">{activeCount}</p>
               <button
                 type="button"
                 className="count-btn"
                 onClick={this.onIncrementCount}
-                data-testid="increment-count"
               >
                 +
               </button>
