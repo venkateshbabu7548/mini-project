@@ -24,20 +24,24 @@ const CartItem = props => {
   }
 
   return (
-    <li className="cart-sm-item">
+    <li testid="cartItem" className="cart-sm-item">
       <img src={imageUrl} alt="cartItem" className="sm-cart-img" />
       <div className="sm-content">
         <p className="sm-name">{name}</p>
         <div className="sm-btn-con">
           <button
+            testid="decrement-quantity"
             type="button"
             className="sm-count-btn"
             onClick={onDecreaseQuantity}
           >
             -
           </button>
-          <p className="count">{quantity}</p>
+          <p testid="item-quantity" className="count">
+            {quantity}
+          </p>
           <button
+            testid="increment-quantity"
             type="button"
             className="sm-count-btn"
             onClick={onIncreaseQuantity}

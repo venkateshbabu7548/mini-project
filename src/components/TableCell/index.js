@@ -24,7 +24,7 @@ const TableCell = props => {
   }
 
   return (
-    <tr>
+    <tr testid="cartItem">
       <td>
         <div className="cart-img-con">
           <img src={imageUrl} alt="cartItem" className="cart-img" />
@@ -35,14 +35,18 @@ const TableCell = props => {
       <td>
         <div className="quantity-btn-con">
           <button
+            testid="decrement-quantity"
             type="button"
             className="count-btn"
             onClick={onDecreaseQuantity}
           >
             -
           </button>
-          <p className="count">{quantity}</p>
+          <p testid="item-quantity" className="count">
+            {quantity}
+          </p>
           <button
+            testid="increment-quantity"
             type="button"
             className="count-btn"
             onClick={onIncreaseQuantity}

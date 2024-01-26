@@ -52,98 +52,58 @@ class Login extends Component {
       return <Redirect to="/" />
     }
     return (
-      <>
-        <div className="login-large-bg-container">
-          <div className="left-container">
-            <div className="login-responsive">
-              <img
-                src="https://res.cloudinary.com/dqeh6jl97/image/upload/v1702367546/Frame_274_lhty1f.png"
-                className="website-logo"
-                alt="website logo"
-              />
-              <p className="website-heading">Tasty Kitchens</p>
-              <h1>Login</h1>
-              <form
-                className="login-form-container"
-                onSubmit={this.onSubmitForm}
-              >
-                <div className="login-input-field">
-                  <label htmlFor="username">USERNAME</label>
-                  <input
-                    type="text"
-                    className="login-input"
-                    id="username"
-                    onChange={this.onChangeUsername}
-                    value={username}
-                  />
-                </div>
-                <div className="login-input-field">
-                  <label htmlFor="password">PASSWORD</label>
-                  <input
-                    type="password"
-                    className="login-input"
-                    id="password"
-                    onChange={this.onChangePassword}
-                    value={password}
-                  />
-                </div>
-                {showErrorMsg && <p className="error-msg">{errorMsg}</p>}
-                <button type="submit" className="login-btn">
-                  Login
-                </button>
-              </form>
-            </div>
-          </div>
-          <div className="right-container">
+      <div className="login-large-bg-container">
+        <div className="left-container">
+          <div className="login-responsive">
             <img
-              src="https://res.cloudinary.com/dqeh6jl97/image/upload/v1702365235/Rectangle_1456_mp6uhs.png"
-              className="website-login"
-              alt="website login"
+              src="https://res.cloudinary.com/dqeh6jl97/image/upload/v1702367546/Frame_274_lhty1f.png"
+              className="website-logo"
+              alt="website logo"
             />
-          </div>
-        </div>
-
-        <div className="login-small-bg-container">
-          <div className="login-top-container">
             <img
               src="https://res.cloudinary.com/dqeh6jl97/image/upload/v1702372669/Rectangle_1457_kkeemz.png"
               alt="website-login"
               className="small-website-login"
             />
-          </div>
-          <div className="login-bottom-container">
-            <h1>Login</h1>
-            <form
-              className="login-form-small-container"
-              onSubmit={this.onSubmitForm}
-            >
+            <h1 className="website-heading">Tasty Kitchens</h1>
+
+            <form className="login-form-container" onSubmit={this.onSubmitForm}>
+              <h1>Login</h1>
               <div className="login-input-field">
-                <label htmlFor="username1">USERNAME</label>
+                <label htmlFor="username">USERNAME</label>
                 <input
                   type="text"
                   className="login-input"
-                  id="username1"
+                  id="username"
                   onChange={this.onChangeUsername}
                   value={username}
                 />
               </div>
               <div className="login-input-field">
-                <label htmlFor="password1">PASSWORD</label>
+                <label htmlFor="password">PASSWORD</label>
                 <input
                   type="password"
                   className="login-input"
-                  id="password1"
+                  id="password"
                   onChange={this.onChangePassword}
                   value={password}
                 />
               </div>
+              {showErrorMsg && <p className="error-msg">{errorMsg}</p>}
               <button type="submit" className="login-btn">
                 Login
               </button>
             </form>
           </div>
         </div>
-      </>
+        <div className="right-container">
+          <img
+            src="https://res.cloudinary.com/dqeh6jl97/image/upload/v1702365235/Rectangle_1456_mp6uhs.png"
+            className="website-login"
+            alt="website login"
+          />
+        </div>
+      </div>
     )
   }
 }

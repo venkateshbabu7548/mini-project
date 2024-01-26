@@ -1,6 +1,7 @@
 .login-large-bg-container {
   height: 100vh;
   width: 100vw;
+
   display: flex;
   font-family: 'DM Sans';
 }
@@ -10,6 +11,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.small-website-login {
+  display: none;
 }
 .right-container {
   height: 100%;
@@ -40,7 +44,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 .login-input-field {
   display: flex;
@@ -72,9 +76,6 @@ label {
   font-weight: bold;
   font-size: 16px;
 }
-.login-small-bg-container {
-  display: none;
-}
 
 .error-msg {
   color: #ef4444;
@@ -83,42 +84,33 @@ label {
 }
 
 @media screen and (max-width: 576px) {
-  .login-large-bg-container {
+  .right-container {
     display: none;
   }
-
-  .login-small-bg-container {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    flex-direction: column;
-
-    align-items: center;
-    font-family: DM Sans;
-  }
-  .login-top-container {
-    display: flex;
-    height: 50%;
+  .left-container {
     width: 100%;
-    justify-content: flex-end;
   }
-  .login-bottom-container {
-    height: 50%;
-    width: 85%;
-
-    top: -60px;
-    position: relative;
+  .website-logo {
+    display: none;
+  }
+  .login-responsive {
+    width: 100%;
+    height: 100%;
+  }
+  .website-heading {
+    display: none;
   }
   .small-website-login {
+    display: block;
     height: 100%;
-    width: 90%;
-    left: 50px;
+    width: 80%;
+    align-self: flex-end;
   }
-  .login-form-small-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .login-form-container {
     align-items: flex-start;
+
+    align-self: center;
+    position: relative;
+    top: -80px;
   }
 }

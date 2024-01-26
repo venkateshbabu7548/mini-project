@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import {FaRupeeSign} from 'react-icons/fa'
+import {Link} from 'react-router-dom'
 
 import Header from '../Header'
 import Footer from '../Footer'
@@ -123,10 +124,10 @@ class Cart extends Component {
         <hr className="dotted" />
         <div className="total-con">
           <div className="total-con-res">
-            <p>Order Total:</p>
+            <h1>Order Total:</h1>
             <div className="total-price">
               <FaRupeeSign />
-              <p>{`${this.totalPrice()}.00`}</p>
+              <p testid="total-price">{`${this.totalPrice()}.00`}</p>
             </div>
           </div>
         </div>
@@ -145,11 +146,6 @@ class Cart extends Component {
     )
   }
 
-  redirectToHome = () => {
-    const {history} = this.props
-    history.replace('/')
-  }
-
   renderNoOrdersView = () => (
     <div className="empty-cart-con">
       <img
@@ -161,8 +157,8 @@ class Cart extends Component {
       <p className="empty-para">
         Your cart is empty. Add something from the menu.
       </p>
-      <button type="button" className="order-btn" onClick={this.redirectToHome}>
-        Order now
+      <button type="button" className="order-btn">
+        <Link to="/">Order Now</Link>
       </button>
     </div>
   )

@@ -92,13 +92,13 @@ class FoodItem extends Component {
     const {activeCount, isShowCount} = this.state
 
     return (
-      <li className="food-item-con">
+      <li testid="foodItem" className="food-item-con">
         <img src={imageUrl} className="food-item-img" alt={name} />
         <div className="food-item-content">
           <h1 className="food-item-name">{name}</h1>
           <div className="food-item-para">
             <FaRupeeSign />
-            <p className="food-item-suffix">{`${cost}.00`}</p>
+            <p className="food-item-suffix">{cost}</p>
           </div>
           <div className="food-item-para food-item-rating">
             <FaStar color="#f7931e" />
@@ -117,14 +117,18 @@ class FoodItem extends Component {
           {isShowCount && (
             <div className="count-btn-con">
               <button
+                testid="decrement-count"
                 type="button"
                 className="count-btn"
                 onClick={this.onDecrementCount}
               >
                 -
               </button>
-              <p className="count">{activeCount}</p>
+              <p testid="active-count" className="count">
+                {activeCount}
+              </p>
               <button
+                testid="increment-count"
                 type="button"
                 className="count-btn"
                 onClick={this.onIncrementCount}
