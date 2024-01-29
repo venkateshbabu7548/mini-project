@@ -156,10 +156,7 @@ class Home extends Component {
   }
 
   renderCarouselLoadingView = () => (
-    <div
-      testid="restaurants-offers-loader"
-      className="carousel-loader-container"
-    >
+    <div className="carousel-loader-container">
       <Loader type="Oval" color="#f7931e" height="50" width="50" />
     </div>
   )
@@ -189,7 +186,7 @@ class Home extends Component {
   }
 
   renderRestaurantsLoadingView = () => (
-    <div testid="restaurants-list-loader" className="carousel-loader-container">
+    <div className="carousel-loader-container">
       <Loader type="Oval" color="#f7931e" height="50" width="50" />
     </div>
   )
@@ -271,7 +268,6 @@ class Home extends Component {
           <div className="restaurants-con">{this.renderRestaurantsList()}</div>
           <div className="home-pagination-con">
             <button
-              testid="pagination-left-button"
               className="pagination-button"
               type="button"
               onClick={this.onDecreasePage}
@@ -279,11 +275,10 @@ class Home extends Component {
               <FaAngleLeft className="pagination-icon" aria-label="close" />
             </button>
             <p className="home-pages">
-              <span testid="active-page-number">{activePageNumber} </span>
+              <span>{activePageNumber} </span>
               of 3
             </p>
             <button
-              testid="pagination-right-button"
               className="pagination-button"
               type="button"
               onClick={this.onIncreasePage}

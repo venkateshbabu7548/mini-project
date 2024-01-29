@@ -127,7 +127,7 @@ class Cart extends Component {
             <h1>Order Total:</h1>
             <div className="total-price">
               <FaRupeeSign />
-              <p testid="total-price">{`${this.totalPrice()}.00`}</p>
+              <p>{`${this.totalPrice()}.00`}</p>
             </div>
           </div>
         </div>

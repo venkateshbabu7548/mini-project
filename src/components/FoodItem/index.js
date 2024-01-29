@@ -53,8 +53,8 @@ class FoodItem extends Component {
       }
       return each
     })
-    const stringfiedCart = JSON.stringify(modifiedCart)
-    localStorage.setItem('cartData', stringfiedCart)
+    const stringifiedCart = JSON.stringify(modifiedCart)
+    localStorage.setItem('cartData', stringifiedCart)
     console.log(JSON.parse(localStorage.getItem('cartData')))
   }
 
@@ -63,8 +63,8 @@ class FoodItem extends Component {
     const {id} = details
     const parsedCart = JSON.parse(localStorage.getItem('cartData'))
     const updatedCart = parsedCart.filter(each => each.id !== id)
-    const stringfiedCart = JSON.stringify(updatedCart)
-    localStorage.setItem('cartData', stringfiedCart)
+    const stringifiedCart = JSON.stringify(updatedCart)
+    localStorage.setItem('cartData', stringifiedCart)
   }
 
   onIncrementCount = () => {
@@ -92,7 +92,7 @@ class FoodItem extends Component {
     const {activeCount, isShowCount} = this.state
 
     return (
-      <li testid="foodItem" className="food-item-con">
+      <li className="food-item-con">
         <img src={imageUrl} className="food-item-img" alt={name} />
         <div className="food-item-content">
           <h1 className="food-item-name">{name}</h1>
@@ -117,18 +117,14 @@ class FoodItem extends Component {
           {isShowCount && (
             <div className="count-btn-con">
               <button
-                testid="decrement-count"
                 type="button"
                 className="count-btn"
                 onClick={this.onDecrementCount}
               >
                 -
               </button>
-              <p testid="active-count" className="count">
-                {activeCount}
-              </p>
+              <p className="count">{activeCount}</p>
               <button
-                testid="increment-count"
                 type="button"
                 className="count-btn"
                 onClick={this.onIncrementCount}
